@@ -6,9 +6,9 @@ CLI program to fetch the most popular repositories of the given organization bas
 ## Problem Statement
 Find the **N** most popular repositories of a given organization on Github (Eg: [https://github.com/google](https://github.com/google)) based on the number of forks. For each such repo find the top **M** committees and their commit counts.
 
-## Prerequisites
-- [Python 3.x](https://www.python.org/downloads/)
-- Package manager [pip](https://pip.pypa.io/en/stable/)
+## Requirements
+- [Python 3.x](https://www.python.org/downloads/) Installed
+- Package manager [pip](https://pip.pypa.io/en/stable/) Installed
 
 ## Dependencies
 - requests
@@ -35,9 +35,9 @@ python github_popular_repositories.py
 - The program prompts to enter the Github Personal Access Token, you can also skip this by simply pressing *ENTER*
 - The user must now enter the name of the organization
 - The program verifies the Organization name.
-- If valid, the user is prompted to enter the Repo Count ('N') and the Committee Count ('M')
+- *If valid*, the user is prompted to enter the Repo Count ('N') and the Committee Count ('M')
 - The program checks if these are valid integers
-- If valid, the program prints the list of most popular repositories along with their name and forks count and the list of top committees and their commit counts.
+- *If valid*, the program prints the list of most popular repositories along with their name and forks count and the list of top committees and their commit counts.
 
 ## Error Handling
 In case of any error, the program stops after printing the error code and the error message.
@@ -45,6 +45,21 @@ In case of any error, the program stops after printing the error code and the er
 - **401:** Invalid Access Token
 - **403:** API Rate Limit Exceeded
 - **404:** Invalid Organization name
+
+## Screenshots
+- **Invalid Access Code:**
+![](https://github.com/rakshak1010/github-popular-repositories-cli/blob/master/Screenshots/invalid-access-code.jpg)
+
+- **Invalid Organization Name:**
+![](https://github.com/rakshak1010/github-popular-repositories-cli/blob/master/Screenshots/invalid-organisation.jpg)
+
+- **Invalid input of *N* or *M*:**
+![](https://github.com/rakshak1010/github-popular-repositories-cli/blob/master/Screenshots/invalid-integer-input.jpg)
+
+- **Output Google Repos:**
+Organization: google, &nbsp;   &nbsp;   &nbsp; Repo Count (N): 5, &nbsp;   &nbsp;   &nbsp; Committees Count (M): 3
+![](https://github.com/rakshak1010/github-popular-repositories-cli/blob/master/Screenshots/google-repos-1.jpg)
+![](https://github.com/rakshak1010/github-popular-repositories-cli/blob/master/Screenshots/google-repos-2.jpg)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
